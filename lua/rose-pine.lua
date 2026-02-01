@@ -1066,6 +1066,7 @@ local function set_highlights()
 		DiffviewStatusDeleted = { fg = groups.git_delete },
 		DiffviewStatusBroken = { fg = groups.git_delete },
 		DiffviewStatusIgnored = { fg = groups.git_ignore },
+		NetrwHidden = { fg = palette.muted, italic = true },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
@@ -1208,6 +1209,7 @@ local function set_highlights()
 			autocmd TermOpen * if &buftype=='terminal'
 				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
 				\|else|setlocal winhighlight=|endif
+			autocmd FileType netrw syntax match NetrwHidden /^\s*\..*/ containedin=ALL
 			autocmd ColorSchemePre * autocmd! rose-pine
 		augroup END
 		]])
