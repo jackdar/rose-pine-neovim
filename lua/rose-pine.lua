@@ -33,7 +33,7 @@ local function set_highlights()
 		["@method"] = { fg = palette.rose },
 		["@namespace"] = { link = "Include" },
 		["@number"] = { link = "Number" },
-		["@parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@parameter"] = { fg = palette.iris },
 		["@preproc"] = { link = "PreProc" },
 		["@punctuation"] = { fg = palette.subtle },
 		["@punctuation.bracket"] = { link = "@punctuation" },
@@ -47,7 +47,6 @@ local function set_highlights()
 		["@text.danger"] = { fg = groups.error },
 		["@text.diff.add"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
 		["@text.diff.delete"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
-		["@text.emphasis"] = { italic = styles.italic },
 		["@text.environment"] = { link = "Macro" },
 		["@text.environment.name"] = { link = "Type" },
 		["@text.math"] = { link = "Special" },
@@ -273,10 +272,10 @@ local function set_highlights()
 
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
-		["@variable.parameter.builtin"] = { fg = palette.iris, italic = styles.italic, bold = styles.bold },
+		["@variable"] = { fg = palette.text },
+		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
+		["@variable.parameter"] = { fg = palette.iris },
+		["@variable.parameter.builtin"] = { fg = palette.iris, bold = styles.bold },
 		["@variable.member"] = { fg = palette.foam },
 
 		["@constant"] = { fg = palette.gold },
@@ -310,7 +309,7 @@ local function set_highlights()
 
 		["@attribute"] = { fg = palette.iris },
 		["@attribute.builtin"] = { fg = palette.iris, bold = styles.bold },
-		["@property"] = { fg = palette.foam, italic = styles.italic },
+		["@property"] = { fg = palette.foam },
 
 		["@function"] = { fg = palette.rose },
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
